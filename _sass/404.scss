@@ -1,0 +1,28 @@
+@import "constants";
+@import "fonts";
+
+.notfound-text {
+    h1 {
+        color: $primary-highlight;
+        margin: 0;
+    }
+    h6 {
+        text-transform: uppercase;
+        color: $website-text-colour;
+    }
+}
+
+.notfound {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    top: 0;
+    position: fixed;
+    z-index: 9999;
+    background: $sidebar-colour;
+    color: $website-text-colour;
+    transition: all .25s ease;
+}

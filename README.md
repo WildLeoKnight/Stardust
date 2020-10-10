@@ -29,13 +29,25 @@ Or install it yourself as:
 
     $ gem install Stardust
 
+## Github Pages
+
+In your `_config.yml` delete the `theme: ` line and add:
+
+```yaml
+remote_theme: wildleoknight/stardust
+```
+
+You also need to make the following changes in your `Gemfile`:
+
+```Gemfile
+# Comment the jekyll gem
+# gem "jekyll", "~> 4.1.0"
+# Uncomment github-pages
+gem "github-pages", group: :jekyll_plugins
+```
 ## Usage
 
 TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
