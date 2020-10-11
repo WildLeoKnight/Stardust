@@ -17,14 +17,8 @@
         </div>
     </div>
     <div class="sidebar-links">
-        {% if site.github_url %}
-            <a href="{{ site.github_url }}"><img class="github-image" src="/assets/images/GitHub-Mark-Light-64px.png"/>github</a>
-        {% endif %}
-        {% if site.github_url and site.resume %}
-                / 
-        {% endif %}
-        {% if site.resume %}
-            <a href="{{ "/resume" }}" class="fade-onclick">resume</a>
-        {% endif %}
+            {% for social in site.data.socials %}
+                <a href="{{ social.url }}"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}"/></a>
+            {% endfor %}   
     </div>
 </section>

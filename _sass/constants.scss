@@ -1,26 +1,27 @@
-// Colours
+// colors
 
 $primary-highlight: #8f3aff;
 $secondary-highlight: #47d163;
 $tertiary-highlight: #ff8f3a;
 
 
-$sidebar-colour: #222833;
-$hover-colour: #FF0000;
-$description-colour: #00FF00;
+$sidebar-color: #222833;
+$hover-color: #222833;
 
-$website-text-colour: #e7e7e8;  
-$website-secondary-text-colour: #d0d0d2;
-$website-background-color: #141519;
+$text-color: #e7e7e8;  
+$secondary-text-color: #d0d0d2;
+$background-color: #141520;
 
-$table-background-colour: #2b2c2f;
-// #2b2c2f
+$table-background-color: #222833;
+
 // Sizes
 
-$sidebar-width: 330px;
+$sidebar-width: 300px;
 $sidebar-height-min: 150px;
 $sidebar-height: 200px;
+$social-link-width: 32px;
 
+// Syntax highlighting colors
 // Base 16 theme
 // Scheme: "Snazzy"
 // Author: "Chawye Hsu (https://github.com/h404bi) based on Hyper Snazzy Theme (https://github.com/sindresorhus/hyper-snazzy)"
@@ -59,3 +60,21 @@ $base0F: #b2643c; //Unused
 // $base0D: #2de0a7;
 // $base0E: #7aa5ff;
 // $base0F: #ff79c6; //Unused
+
+
+// $base00: #000000; 
+// $base01: #1d2b53; //Unused
+// $base02: #7e2553; 
+// $base03: #008751; 
+// $base04: #ab5236; //Unused
+// $base05: #5f574f; 
+// $base06: #c2c3c7; //Unused
+// $base07: #fff1e8; //Unused
+// $base08: #ff004d; 
+// $base09: #ffa300; 
+// $base0A: #fff024; 
+// $base0B: #00e756; 
+// $base0C: #29adff; 
+// $base0D: #83769c; 
+// $base0E: #ff77a8; 
+// $base0F: #ffccaa; //Unused

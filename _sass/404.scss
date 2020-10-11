@@ -8,7 +8,7 @@
     }
     h6 {
         text-transform: uppercase;
-        color: $website-text-colour;
+        color: $text-color;
     }
 }
 
@@ -22,7 +22,7 @@
     top: 0;
     position: fixed;
     z-index: 9999;
-    background: $sidebar-colour;
-    color: $website-text-colour;
+    background: $sidebar-color;
+    color: $text-color;
     transition: all .25s ease;
 }

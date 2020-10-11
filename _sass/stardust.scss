@@ -6,8 +6,8 @@ html, body {
     padding: 0px;
     height: 100%;
     box-sizing: border-box;
-    color: $website-text-colour;
-    background-color: $website-background-color;
+    color: $text-color;
+    background-color: $background-color;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
@@ -33,7 +33,7 @@ h2 {
     font-size: 1.75rem; 
     margin: 2em 0 0.8em;
     padding-bottom: 0.7em;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $secondary-text-color;
     font-weight: bold;
     line-height: 1.7;
 }
@@ -82,7 +82,7 @@ blockquote {
 }
 
 .notice {
-    border: 1px solid $sidebar-colour;
+    border: 1px solid $sidebar-color;
     border-radius: 0.4em;
     padding: 0.5em 1em;
 }
@@ -112,7 +112,7 @@ table {
   display: table;
   &.striped > tbody {
     > tr:nth-child(odd) {
-      background-color: $table-background-colour;
+      background-color: $table-background-color;
     }
   }
 }

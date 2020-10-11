@@ -17,33 +17,33 @@
 }
 
 .button-dark {
-    @include button($website-text-colour, $sidebar-colour)
+    @include button($text-color, $sidebar-color)
 }
 
 .button-dark-primary {
-    @include button($primary-highlight, $sidebar-colour)
+    @include button($primary-highlight, $sidebar-color)
 }
 
 .button-dark-secondary {
-    @include button($secondary-highlight, $sidebar-colour)
+    @include button($secondary-highlight, $sidebar-color)
 }
 
 .button-dark-tertiary {
-    @include button($tertiary-highlight, $sidebar-colour)
+    @include button($tertiary-highlight, $sidebar-color)
 }
 
 .button-light {
-    @include button($sidebar-colour, $website-text-colour)
+    @include button($sidebar-color, $text-color)
 }
 
 .button-light-primary {
-    @include button($primary-highlight, $website-text-colour)
+    @include button($primary-highlight, $text-color)
 }
 
 .button-light-secondary {
-    @include button($secondary-highlight, $website-text-colour)
+    @include button($secondary-highlight, $text-color)
 }
 
 .button-light-tertiary {
-    @include button($tertiary-highlight, $website-text-colour)
+    @include button($tertiary-highlight, $text-color)
 }

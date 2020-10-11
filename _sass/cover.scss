@@ -8,7 +8,7 @@
     }
     h6 {
         text-transform: uppercase;
-        color: $website-text-colour;
+        color: $text-color;
     }
     a {
         color: $primary-highlight;
@@ -32,8 +32,8 @@
     top: 0;
     position: fixed;
     z-index: 9999;
-    background: $sidebar-colour;
-    color: $website-text-colour;
+    background: $sidebar-color;
+    color: $text-color;
     transition: all .25s ease;
     flex-direction: column;
     text-align: center;
@@ -49,5 +49,5 @@
 .cover-tagline {
     max-width: 250px;
     margin: auto;
-    color: $hover-colour;
+    color: $secondary-text-color;
 }

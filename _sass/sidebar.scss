@@ -10,7 +10,7 @@
     }
     h6 {
         text-transform: uppercase;
-        color: $website-text-colour;
+        color: $text-color;
     }
     a {
         text-decoration: none;
@@ -19,17 +19,20 @@
             color: lighten($primary-highlight, 14%);
         }
     }
+    ul {
+        list-style-type: none;
+    }
 }
 
 .sidebar-tagline {
     max-width: 250px;
     margin: auto;
-    color: $hover-colour;
+    color: $secondary-text-color;
 }
 
-.github-image {
-    width: 1rem;
-    margin-right: .5rem;
+.social-image {
+    width: $social-link-width;
+    margin-right: 0px;
     vertical-align: middle;
 }
 
@@ -38,9 +41,12 @@
     top: 0;
     position: fixed;
     z-index: 9999;
-    background: $sidebar-colour;
-    color: $website-text-colour;
+    background: $sidebar-color;
+    color: $text-color;
     transition: all .35s ease;
+}
+.sidebar-image-container {
+    margin-top: 10px;
 }
 
 .content {
@@ -55,7 +61,7 @@
     right: 0;
     z-index: 9999;
     pointer-events: none;
-    background: $website-background-color;
+    background: $background-color;
     opacity: 1;
     animation-duration: .35s;
     animation-timing-function: ease;
@@ -66,7 +72,7 @@
     left: 0;
     z-index: 9999;
     pointer-events: none;
-    background: $sidebar-colour;
+    background: $sidebar-color;
     opacity: 1;
     animation-duration: .35s;
     animation-timing-function: ease;
@@ -121,6 +127,7 @@
 
         .sidebar-image-container {
             margin-right: 1em;
+            margin-top: 0px;
         }
     
         .sidebar-image {
@@ -164,7 +171,8 @@
         }
 
         .sidebar-links {
-            margin-top: 1em;
+            // margin-top: 1em;
+            margin-top: 0px;
         }
 
         .post-buttons {
@@ -182,7 +190,7 @@
     #sidebar {
         flex-direction: column;
         text-align: center;
-        justify-content: center;
+        // justify-content: center;
     }
 
     .sidebar, .sidebar-minimised {
@@ -202,14 +210,15 @@
     }
 
     .sidebar-links {
-        margin-top: 1em;
+        // margin-top: 1em;
+        margin-top: 0px;
     }
 
     #content-fader {
         top: 0;
         width: calc(100% - #{$sidebar-width});
         height: 100%;
-        background: $website-background-color;
+        background: $background-color;
     }
 
     #sidebar-fader {
