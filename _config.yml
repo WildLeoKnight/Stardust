@@ -5,6 +5,10 @@ description: Portfolio
 image: /assets/images/image.png
 url: https://github.com/wildleoknight/stardust
 github_url: https://github.com/wildleoknight
+main_url: http://localhost:4000
+sidebar_main_text: 
+cover_url: /Projects/
+cover_text: Check my website
 author: Leonardo "WildLeoKnight" Lourenço
 lang: en-US
 

@@ -7,8 +7,10 @@
             </div>
         {% endif %}
         <div class="sidebar-text">
-            <h1><a href="{{ "/projects/" }}" class="fade-onclick">{{ site.title }}</a></h1>
-            <h6>{{ site.description }}</h6>
+            <h1><a href="{{ site.main_url }}" class="fade-onclick">{{ site.title }}</a></h1>
+            {% if site.sidebar_main_text %}
+                <h6>{{ site.sidebar_main_text }}</h6>
+            {% endif %}       
             {% if site.tagline %}
                 <div class="sidebar-tagline">
                     {{ site.tagline }}
@@ -20,5 +22,56 @@
             {% for social in site.data.socials %}
                 <a href="{{ social.url }}"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}"/></a>
             {% endfor %}   
+    </div>
+    <div class="sidebar-navigation">
+        {% assign urlPart = page.url | downcase | split: '/' %}
+        <ul>
+            {% for navigation in site.data.navigation %}
+            {% assign navPart = navigation.url | downcase | split: '/' %}
+            <li {% if navPart[1] == urlPart[1] %}class="active"{% endif %}>
+                <a href="{{ navigation.url }}" > {{ navigation.title }} </a>
+                {% if navigation.submenu != null %}
+                <ul class="submenu">
+                    {% for submenu in navigation.submenu %}
+                    <li>
+                        <a href="{{ submenu.url }}" > {{ submenu.title }} </a> 
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="sidebar-navigation-button">
+        <span style="font-size:30px;cursor:pointer" onclick="OpenCloseMobileNav()">&#9776;</span>
+    </div>
+    <div id="mobileSideNav" class="mobile-sidebar-navigation">
+        {% assign urlPart = page.url | downcase | split: '/' %}
+        <ul>
+            {% for navigation in site.data.navigation %}
+            {% assign navPart = navigation.url | downcase | split: '/' %}
+            <li {% if navPart[1] == urlPart[1] %}class="active"{% endif %}>               
+                {% if navigation.submenu != null %}
+                <a class="mobileSideNav-Accordion" > {{ navigation.title }} </a>
+                <ul class="submenu">
+                    {% for submenu in navigation.submenu %}
+                    <li>
+                        <a href="{{ submenu.url }}" > {{ submenu.title }} </a> 
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <a href="{{ navigation.url }}" > {{ navigation.title }} </a>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="mobile-sidebar-links">
+            {% for social in site.data.socials %}
+                <a href="{{ social.url }}"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}"/></a>
+            {% endfor %}   
+        </div>
     </div>
 </section>

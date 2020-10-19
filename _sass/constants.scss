@@ -5,21 +5,36 @@ $secondary-highlight: #47d163;
 $tertiary-highlight: #ff8f3a;
 
 
-$sidebar-color: #222833;
-$hover-color: #222833;
-
-$text-color: #e7e7e8;  
-$secondary-text-color: #d0d0d2;
+$text-color: #fbfbfc;  
+$secondary-text-color: #efeff5;
+$secondary-hover-color: #323550;
+$sidebar-color: #232538;
+$hover-color: #232538;
+$table-background-color: #232538;
 $background-color: #141520;
 
-$table-background-color: #222833;
+
+// $text-color: #141520;  
+// $secondary-text-color: #232538;
+// $secondary-hover-color: #323550;
+// $sidebar-color: #efeff5;
+// $hover-color: #efeff5;
+// $table-background-color: #efeff5;
+// $background-color: #fbfbfc;
+
+
 
 // Sizes
 
 $sidebar-width: 300px;
-$sidebar-height-min: 150px;
-$sidebar-height: 200px;
+$sidebar-height-min: 100px;
+$sidebar-height: 120px;
 $social-link-width: 32px;
+
+$sidebar-image-width: 192px;
+$sidebar-image-height: 192px;
+$sidebar-image-radius: 10%;
+
 
 // Syntax highlighting colors
 // Base 16 theme

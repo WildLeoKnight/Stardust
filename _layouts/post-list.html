@@ -6,6 +6,7 @@ layout: default
   <svg id="content-fader"></svg>
   <div class="list-posts">
     {% for post in site.posts %}
+    {% if post.listable == true %}
     <div class="list-post">
       <a href="{{ post.url }}" class="fade-onclick">
         <div class="list-post-link">
@@ -24,6 +25,7 @@ layout: default
         <span class="list-post-tags">{{ post.tags | join: ", "}}</span>
       </div>
     </div>
+    {% endif %}
     {% endfor %} 
   </div>
   {% include footer.html %}

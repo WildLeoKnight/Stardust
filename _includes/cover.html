@@ -2,14 +2,16 @@
     <div class="cover-text">
       {% if site.image %}<img class="cover-image" src="{{ site.image }}" />{% endif %}
       <h1>{{ site.title }}</a></h1>
-      <h6>{{ site.description }}</h6>
+      {% if site.sidebar_main_text %}
+          <h6>{{ site.sidebar_main_text }}</h6>
+      {% endif %}       
       {% if site.tagline %}
-        <div class="cover-tagline">
-          {{ site.tagline }}
-        </div>
+          <div class="sidebar-tagline">
+              {{ site.tagline }}
+          </div>
       {% endif %}
     </div>
     <div class="open-button-container">
-        <a href="/projects/" id="open-button" class="button-dark">See my projects</a>
+        <a href="{{ site.cover_url }}" id="open-button" class="button-dark">{{ site.cover_text }}</a>
     </div>
 </section>

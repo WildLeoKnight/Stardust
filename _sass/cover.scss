@@ -41,9 +41,9 @@
 }
 
 .cover-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width:  $sidebar-image-width;
+    height: $sidebar-image-height;
+    border-radius: $sidebar-image-radius;
 }
 
 .cover-tagline {
