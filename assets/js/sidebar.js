@@ -29,12 +29,18 @@ acc[i].addEventListener("click", function() {
 
 function OpenCloseMobileNav() {
     let mobileNavBar = document.getElementById("mobileSideNav");
-    let body = document.getElementsByTagName("BODY")[0]
-    if (mobileNavBar.classList.contains("open")){
-        mobileNavBar.classList.remove("open");
-        body.classList.remove("mobileSideNav-active")
-    }else{
-        mobileNavBar.classList.add("open");
-        body.classList.add("mobileSideNav-active")
-    }
+    let body = document.getElementsByTagName("BODY")[0];
+    let mobileNavbutton = document.getElementById("mobileSideNavButton");
+    // if (mobileNavBar.classList.contains("open")){
+    //     mobileNavBar.classList.remove("open");
+    //     body.classList.remove("mobileSideNav-active")
+        
+    // }else{
+    //     mobileNavBar.classList.add("open");
+    //     body.classList.add("mobileSideNav-active")
+
+    // }
+    mobileNavBar.classList.toggle("open");
+    body.classList.toggle("mobileSideNav-active")
+    mobileNavbutton.classList.toggle("close")
 }

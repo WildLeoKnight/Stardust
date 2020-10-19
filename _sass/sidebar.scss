@@ -153,13 +153,16 @@
 }
 
 .sidebar-navigation-button{
+    cursor: pointer;
     position: fixed;
     z-index: 9999;
-    right: 25px;
+    right: 20px;
     top: 25px;
     display: none;
     opacity: 0;
     visibility: hidden;
+    border: 1px solid $secondary-text-color;
+    border-radius: 10%;
     @include navigation-transition();
 }
 
@@ -226,7 +229,16 @@
     background-color: $secondary-hover-color;
 }
 
-
+.mobileNavIcon{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/mobileNavIconOpen.png);
+    margin: 2px;
+}
+.close{
+    background-image: url(../images/mobileNavIconClose.png);
+}
 
 @media only screen and (orientation: portrait) {
     .sidebar {

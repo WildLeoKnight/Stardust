@@ -44,8 +44,8 @@
         </ul>
     </div>
 
-    <div class="sidebar-navigation-button">
-        <span style="font-size:30px;cursor:pointer" onclick="OpenCloseMobileNav()">&#9776;</span>
+    <div class="sidebar-navigation-button" onclick="OpenCloseMobileNav()">
+        <a id="mobileSideNavButton" class="mobileNavIcon" ></a>
     </div>
     <div id="mobileSideNav" class="mobile-sidebar-navigation">
         {% assign urlPart = page.url | downcase | split: '/' %}
