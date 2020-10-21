@@ -29,8 +29,8 @@
             {% for navigation in site.data.navigation %}
             {% assign navPart = navigation.url | downcase | split: '/' %}
             <li {% if navPart[1] == urlPart[1] %}class="active"{% endif %}>
-                <a href="{{ navigation.url }}" > {{ navigation.title }} </a>
                 {% if navigation.submenu != null %}
+                <a class="submenu-icon" > {{ navigation.title }} </a>
                 <ul class="submenu">
                     {% for submenu in navigation.submenu %}
                     <li>
@@ -38,6 +38,8 @@
                     </li>
                     {% endfor %}
                 </ul>
+                {% else %}
+                <a href="{{ navigation.url }}" > {{ navigation.title }} </a>
                 {% endif %}
             </li>
             {% endfor %}
@@ -54,7 +56,7 @@
             {% assign navPart = navigation.url | downcase | split: '/' %}
             <li {% if navPart[1] == urlPart[1] %}class="active"{% endif %}>               
                 {% if navigation.submenu != null %}
-                <a class="mobileSideNav-Accordion" > {{ navigation.title }} </a>
+                <a class="mobileSideNav-Accordion submenu-icon" > {{ navigation.title }} </a>
                 <ul class="submenu">
                     {% for submenu in navigation.submenu %}
                     <li>

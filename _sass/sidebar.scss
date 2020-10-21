@@ -206,6 +206,7 @@
         line-height: 35px;
         @include navigation-transition();
     }
+    
 }
 
 .mobile-sidebar-links {
@@ -223,6 +224,9 @@
 
 .mobileSideNav-active{
     overflow: hidden;
+}
+.submenu-icon::after{
+    content: $submenu-icon;
 }
 
 .mobileSideNav-Accordion-active{
