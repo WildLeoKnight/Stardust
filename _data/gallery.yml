@@ -1,0 +1,21 @@
+- image: /gallery/path/to/your/images.jpg
+  title: "Test title"
+  description: "Test description"
+  linkurl: "https://wildleoknight.wixsite.com/wildleoknight"
+  linktext: "Text link text"
+  category: [ all, pixel-art ]
+
+- image: /gallery/path/to/your/images.jpg
+  title: "Test title 2"
+  description: "Test description 2"
+  linkurl: "https://wildleoknight.wixsite.com/wildleoknight"
+  linktext: "Text link text 2"
+  category: [ all, pixel-art, commissions ]
+
+- image: /gallery/path/to/your/images.jpg
+  title: "Test title 3"
+  description: "Test description 3"
+  linkurl: "https://wildleoknight.wixsite.com/wildleoknight"
+  linktext: "Text link text 3"
+  category: [ all, pixel-art ]
+  

@@ -1,4 +1,4 @@
-FlexMasonry.init('.list-galeries', {
+FlexMasonry.init('.list-galleries', {
     responsive: true,
     breakpointCols: {
         'min-width: 1920px': 7,
