@@ -1,16 +1,16 @@
-.list-posts {
+.list-gallery {
     margin-bottom: 2em;
     width: 100%;
 }
 
-.list-post-link {
+.list-piece-link {
     margin: 2em 1em 0 1em;
     display: block;
     width: auto;
     height: auto;
 }
 
-.list-post-link:hover {
+.list-piece-link:hover {
     background-color: $hover-color;
     opacity: 0.8;
     border-radius: 5px;
@@ -18,17 +18,17 @@
     -webkit-transition: .2s ease-in-out;
 }
 
-.list-post-image {
+.list-piece-image {
     width: 100%;
     margin-bottom: 0.4em;
     border-radius: 5px;
 }
 
-.list-post-info {
+.list-piece-info {
     margin: 0 0.4em;
 }
 
-.list-post-title {
+.list-piece-title {
     color: $text-color;
     width: 100%;
     font-size: 1.5rem;
@@ -41,23 +41,23 @@
     }
 }
 
-.list-post-description {
+.list-piece-description {
     color: $secondary-text-color;
     margin: 0.4em 0;
     font-size: 1rem;
 }
 
-.list-post-footer {
+.list-piece-footer {
     margin: 0 1.4em;
 }
 
-.list-post-date {
+.list-piece-date {
     color: $secondary-highlight;
     font-weight: bold;
     font-size: 0.9rem;
 }
 
-.list-post-tags {
+.list-piece-tags {
     font-weight: bold;
     font-size: 0.9rem;
     color: $tertiary-highlight;
