@@ -8,11 +8,11 @@ layout: default
     {% for art in site.data.gallery %}
     {% if art.category contains page.category %}
     <div class="list-piece">
-      <a href="{{ art.url }}" class="fade-onclick">
-        <div class="list-piece-link">
-            <img class="list-piece-image" src="{{ art.image }}" />
-        </div>
-      </a>
+      <div class="list-piece-link clickable-image">
+        <a href="{{ art.image }}" style="max-width: 500px">
+          <img class="list-piece-image" src="{{ art.image }}" alt="{{ art.title }}" data-echo="{{ art.image }}" />
+        </a>
+      </div>
     </div>
     {% endif %}
     {% endfor %} 
