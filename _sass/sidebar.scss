@@ -237,11 +237,17 @@
     display: block;
     width: 32px;
     height: 32px;
-    background-image: url(../images/mobileNavIconOpen.png);
     margin: 2px;
+    font-size: 26px;
+    text-decoration: none;
+    color: $text-color;
+    &:hover, &:focus {
+            color: $text-color;
+    }
+    &::after { content:'☰'; }
 }
 .close{
-    background-image: url(../images/mobileNavIconClose.png);
+    &::after { content:'✖'; }
 }
 
 @media only screen and (orientation: portrait) {

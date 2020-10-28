@@ -2,6 +2,7 @@
   url: /Projects/
   
 - title: Portfolio
+  url: /Portfolio/
   submenu:
     - title: Everything
       url: /Portfolio/

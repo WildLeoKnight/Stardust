@@ -97,21 +97,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             if(is_imagelink(url) && !element.classList.contains('no-lightbox')) {
                 element.classList.add('lightbox-image');
-                var href = element.getAttribute('href');
-                var filename = href.split('/').pop();
-                var split = filename.split(".");
-                var name = split[0];
-                element.setAttribute('title',name);
             }
         }
     });
 
     //remove the clicked lightbox
     document.getElementById('lightbox').addEventListener("click", function(event) {
-        if(event.target.id != 'next' && event.target.id != 'prev'){
+        if(event.target.id == 'close'){
             this.innerHTML = '';
             document.getElementById('lightbox').style.display = 'none';
-            document.body.style.overflow="visible";
+            document.body.style.overflow="";
         }
     });
     
@@ -133,9 +128,30 @@ document.addEventListener("DOMContentLoaded", function() {
     elements.forEach(element => {
         element.addEventListener("click", function(event) {
             event.preventDefault();
-            document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\''+this.getAttribute('href')+'\') center center / contain no-repeat;" title="'+this.getAttribute('title')+'" ><img src="'+this.getAttribute('href')+'" alt="'+this.getAttribute('title')+'" /></div><span>'+this.getAttribute('title')+'</span>';
+
+            var lightBimgtitle = this.dataset.title || "";
+            var lightBimgdescription = this.dataset.description || "";
+            var lightBimglinkurl = this.dataset.linkurl || "";
+            var lightBimglinktext = this.dataset.linktext || "";
+
+            var imgLighboxHtml = '';
+            if ( lightBimgtitle == "" && lightBimgdescription == "" && lightBimglinktext == "" ) {
+                imgLighboxHtml = '<a id="close"></a><div id="next" style="margin-left: 50%;"><a style="right: 10%;">&rsaquo;</a></div><div id="prev"><a style="left: 10%;">&lsaquo;</a></div><div id="lightbox-image-open" class="img" style="background: url(\''+this.getAttribute('href')+'\') center center / contain no-repeat;" title="'+lightBimgtitle+'" ><img src="'+this.getAttribute('href')+'" alt="'+lightBimgtitle+'" /></div>';
+            }else if ( lightBimglinktext == ""){
+                imgLighboxHtml = '<a id="close"></a><div id="next" style="margin-left: 50%;"><a style="right: 10%;">&rsaquo;</a></div><div id="prev"><a style="left: 10%;">&lsaquo;</a></div><div id="lightbox-image-open" class="img" style="background: url(\''+this.getAttribute('href')+'\') center center / contain no-repeat;" title="'+lightBimgtitle+'" ><img src="'+this.getAttribute('href')+'" alt="'+lightBimgtitle+'" /></div><div class="imgInfo"><p>'+lightBimgtitle +'</p><p>'+lightBimgdescription+'</p></div>';
+            
+            }else{
+                imgLighboxHtml = '<a id="close"></a><div id="next" style="margin-left: 50%;"><a style="right: 10%;">&rsaquo;</a></div><div id="prev"><a style="left: 10%;">&lsaquo;</a></div><div id="lightbox-image-open" class="img" style="background: url(\''+this.getAttribute('href')+'\') center center / contain no-repeat;" title="'+lightBimgtitle+'" ><img src="'+this.getAttribute('href')+'" alt="'+lightBimgtitle+'" /></div><div class="imgInfo"><p>'+lightBimgtitle +'</p><p>'+lightBimgdescription+'</p><p><a href="'+lightBimglinkurl+'" target="_blank">'+lightBimglinktext+'</a></p></div>';
+            }        
+
+            document.getElementById('lightbox').innerHTML = imgLighboxHtml;
             document.getElementById('lightbox').style.display = 'block';
             document.body.style.overflow="hidden";
+            document.getElementById('lightbox-image-open').style.opacity = 0;
+
+            FlexMasonry.refreshAll();
+
+            document.getElementById('lightbox-image-open').style.opacity = 1;
 
             setGallery(this);
         });
