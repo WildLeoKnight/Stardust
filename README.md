@@ -138,7 +138,7 @@ $base0F: #b2643c; //Unused
 ### Layouts
 
 - **default**: The default layout. Can be filled with `content`.
-- **404**: Similar to the default but with less css.
+- **404**: Similar to the default but with less css, used as an error page.
 - **landing**: Cover page.
 - **post-list**: The list of all the posts who have the front matter attribute listable `true`.
 - **post**: The post layout. Used for posts.
@@ -183,7 +183,7 @@ A collection of all the links that appear on the sidebar with the possibility of
       url: /Portfolio/Commissions
 ```
 
-#### socials.yml
+#### Socials.yml
 
 A collection of all the social links on the sidebar.
 
@@ -263,7 +263,7 @@ Cache busting is being used by default on this theme's css/js and gallery but if
 
 ## Credits
 
-This theme was not made *entirely* from scratch, it was based on [arco](https://github.com/meebuhs/arco).
+This theme was not made *entirely* from scratch, it was based on [arco](https://github.com/meebuhs/arco). The base16 theme used by default is **[Sinazzy](https://github.com/chawyehsu/base16-snazzy-scheme)**.
 
 ## License
 
