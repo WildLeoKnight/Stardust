@@ -263,7 +263,7 @@ Cache busting is being used by default on this theme's css/js and gallery but if
 
 ## Credits
 
-This theme was not made *entirely* from scratch, it was based on [arco](https://github.com/meebuhs/arco). The base16 theme used by default is **[Sinazzy](https://github.com/chawyehsu/base16-snazzy-scheme)**.
+This theme was not made *entirely* from scratch, it was based on **[arco](https://github.com/meebuhs/arco)**. The base16 theme used by default is **[Snazzy](https://github.com/chawyehsu/base16-snazzy-scheme)**.
 
 ## License
 
