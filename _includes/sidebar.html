@@ -3,11 +3,11 @@
     <div class="sidebar-header">
         {% if site.image %}
             <div class="sidebar-image-container">
-                <img class="sidebar-image" src="{{ site.image }}" />
+                <img class="sidebar-image" src="{{ site.image }}?{{ site.time | date: '%s%N' }}" />
             </div>
         {% endif %}
         <div class="sidebar-text">
-            <h1><a href="{{ site.main_url }}" class="fade-onclick">{{ site.title }}</a></h1>
+            <h1><a href="{{ site.url }}" class="fade-onclick">{{ site.title }}</a></h1>
             {% if site.sidebar_main_text %}
                 <h6>{{ site.sidebar_main_text }}</h6>
             {% endif %}       
@@ -20,7 +20,7 @@
     </div>
     <div class="sidebar-links">
             {% for social in site.data.socials %}
-                <a href="{{ social.url }}"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}"/></a>
+                <a href="{{ social.url }}"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}?{{ site.time | date: '%s%N' }}"/></a>
             {% endfor %}   
     </div>
     <div class="sidebar-navigation">
@@ -72,7 +72,7 @@
         </ul>
         <div class="mobile-sidebar-links">
             {% for social in site.data.socials %}
-                <a href="{{ social.url }}"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}"/></a>
+                <a href="{{ social.url }}"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}?{{ site.time | date: '%s%N' }}"/></a>
             {% endfor %}   
         </div>
     </div>

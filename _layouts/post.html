@@ -10,7 +10,7 @@ layout: default
   <svg id="content-fader"></svg>
   <div class="post">
     <div class="post-buttons">
-      <a href="{{ site.main_url }}" class="button-light-primary fade-onclick">Home</a>
+      <a href="{{ site.url }}" class="button-light-primary fade-onclick">Home</a>
       {% if page.urls.source %}
         <a href="{{ page.urls.source }}" class="button-light-secondary">See the source</a>
       {% endif %}
@@ -27,8 +27,8 @@ layout: default
       &middot;
       <span class="post-tags">{{ page.tags | join: ", "}}</span>
     </div>
-    <div class="clickable-image"><a href="{{ page.images.top }}" style="max-width: 80%">
-      <img class="post-image" alt="{{ page.title }} | {{ page.description | truncate: 80 }}" src="{{ page.images.top }}" />
+    <div class="clickable-image"><a href="{{ page.images.top }}?{{ site.time | date: '%s%N' }}" style="max-width: 80%">
+      <img class="post-image" alt="{{ page.title }} | {{ page.description | truncate: 80 }}" src="{{ page.images.top }}?{{ site.time | date: '%s%N' }}" />
     </a></div>
 
     <div class="post-content">
@@ -36,7 +36,7 @@ layout: default
     </div>
 
     <div class="post-buttons">
-      <a href="{{ site.main_url }}" class="button-light-primary fade-onclick">Home</a>
+      <a href="{{ site.url }}" class="button-light-primary fade-onclick">Home</a>
       {% if page.urls.source %}
         <a href="{{ page.urls.source }}" class="button-light-secondary">See the source</a>
       {% endif %}

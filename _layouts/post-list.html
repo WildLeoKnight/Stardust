@@ -11,7 +11,7 @@ layout: default
       <a href="{{ post.url }}" class="fade-onclick">
         <div class="list-post-link">
           {% if post.images.cover %}
-            <img class="list-post-image" src="{{ post.images.cover }}" />
+            <img class="list-post-image" src="{{ post.images.cover }}?{{ site.time | date: '%s%N' }}" />
           {% endif %}
           <div class="list-post-info">
             <div class="list-post-title">{{ post.title }}</div>

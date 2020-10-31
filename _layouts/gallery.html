@@ -10,8 +10,8 @@ layout: default
     {% if art.category contains page.category %}
     <div class="list-piece">
       <div class="list-piece-link clickable-image">
-        <a href="{{ art.image }}" data-title="{{ art.title }}" data-description="{{ art.description }}" data-linkurl="{{ art.linkurl }}" data-linktext="{{ art.linktext }}" style="max-width: 500px">
-          <img class="list-piece-image" src="{{ art.image }}" alt="{{ art.title }}" data-echo="{{ art.image }}" />
+        <a href="{{ art.image }}?{{ site.time | date: '%s%N' }}" data-title="{{ art.title }}" data-description="{{ art.description }}" data-linkurl="{{ art.linkurl }}" data-linktext="{{ art.linktext }}" style="max-width: 500px">
+          <img class="list-piece-image" src="{{ art.image }}?{{ site.time | date: '%s%N' }}" alt="{{ art.title }}" data-echo="{{ art.image }}?{{ site.time | date: '%s%N' }}" />
         </a>
       </div>
     </div>
