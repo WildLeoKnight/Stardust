@@ -29,7 +29,7 @@
     line-height: 0.4em; 
     width: 100%; 
     text-align: center;
-    background-color: #000000A3;
+    background-color:  transparentize($background-color, 0.6);
 }
 
 /* #lightbox span {display: none;} */
@@ -51,7 +51,7 @@
     padding: 0;
     position: relative;
     padding-bottom: 56.333%; /* custom */
-    background: black;
+    background: transparentize($background-color, 0.6);
 } 
 #lightbox .videoWrapper iframe {
     position: absolute;
@@ -76,18 +76,18 @@
     cursor: pointer; 
     /* text-decoration: none;  */
     z-index: 99; 
-    color: white; 
+    color: transparentize($text-color, 0.3);
     font-size: 60px;}
 #lightbox #prev a, #lightbox #next a{
     top: 50%;
     position: absolute;
-    color: #FFFFFF;
+    color: transparentize($text-color, 0.3); 
 }
 #lightbox.gallery #prev, #lightbox.gallery #next {display: block;}
 #lightbox #prev {left: 0;}
 #lightbox #next {right: 0;}
 #lightbox #close {height: 50px; width: 50px; position: fixed; cursor: pointer; text-decoration: none; z-index: 100; right: 0; top: 0;}
-#lightbox #close:after, #lightbox #close:before {position: absolute; margin-top: 22px; margin-left: 14px; content: ""; height: 3px; background: white; width: 23px;
+#lightbox #close:after, #lightbox #close:before {position: absolute; margin-top: 22px; margin-left: 14px; content: ""; height: 3px; background: transparentize($text-color, 0.3);  width: 23px;
 -webkit-transform-origin: 50% 50%;
 -moz-transform-origin: 50% 50%;
 -o-transform-origin: 50% 50%;

@@ -5,7 +5,8 @@ layout: default
 <section class="content">
   <svg id="content-fader"></svg>
   <div class="list-gallery">
-    {% for art in site.data.gallery %}
+    {% assign gallery = site.data.gallery | sort: 'date' | reverse %} 
+    {% for art in gallery %}
     {% if art.category contains page.category %}
     <div class="list-piece">
       <div class="list-piece-link clickable-image">
@@ -19,4 +20,4 @@ layout: default
   </div>
   {% include footer.html %}
 </section>
-<script src="/assets/js/gallery-grid-init.js"></script>
+<script src="/assets/js/gallery-grid-init.js?{{ site.time | date: '%s%N' }}"></script>
