@@ -20,7 +20,7 @@
     </div>
     <div class="sidebar-links">
             {% for social in site.data.socials %}
-                <a href="{{ social.url }}"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}?{{ site.time | date: '%s%N' }}"/></a>
+                <a href="{{ social.url }}" target="_blank"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}?{{ site.time | date: '%s%N' }}"/></a>
             {% endfor %}   
     </div>
     <div class="sidebar-navigation">
@@ -72,7 +72,7 @@
         </ul>
         <div class="mobile-sidebar-links">
             {% for social in site.data.socials %}
-                <a href="{{ social.url }}"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}?{{ site.time | date: '%s%N' }}"/></a>
+                <a href="{{ social.url }}" target="_blank"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}?{{ site.time | date: '%s%N' }}"/></a>
             {% endfor %}   
         </div>
     </div>

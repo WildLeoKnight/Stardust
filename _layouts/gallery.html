@@ -4,6 +4,9 @@ layout: default
 
 <section class="content">
   <svg id="content-fader"></svg>
+  <div class="list-gallery-title">
+    <h4>- {{page.title}} -</h4>
+  </div>
   <div class="list-gallery">
     {% assign gallery = site.data.gallery | sort: 'date' | reverse %} 
     {% for art in gallery %}
