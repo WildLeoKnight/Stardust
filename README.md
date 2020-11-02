@@ -216,6 +216,7 @@ images:
     cover: /assets/image-for-front-page.png
     top: /assets/image-for-top-of-post.png 
 tags: [tags, which, relate, to, post]
+listable: true | false
 mathjax: true | false
 ---
 ```
