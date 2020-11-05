@@ -19,9 +19,9 @@
         </div>
     </div>
     <div class="sidebar-links">
-            {% for social in site.data.socials %}
+            {%- for social in site.data.socials -%}
                 <a href="{{ social.url }}" target="_blank"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}?{{ site.time | date: '%s%N' }}"/></a>
-            {% endfor %}   
+            {%- endfor -%}   
     </div>
     <div class="sidebar-navigation">
         {% assign urlPart = page.url | downcase | split: '/' %}
@@ -71,9 +71,9 @@
             {% endfor %}
         </ul>
         <div class="mobile-sidebar-links">
-            {% for social in site.data.socials %}
+            {%- for social in site.data.socials -%}
                 <a href="{{ social.url }}" target="_blank"><img class="social-image" alt="{{ social.title }}" src="{{ social.image }}?{{ site.time | date: '%s%N' }}"/></a>
-            {% endfor %}   
+            {%- endfor -%}   
         </div>
     </div>
 </section>
