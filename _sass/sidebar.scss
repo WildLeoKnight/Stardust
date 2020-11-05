@@ -15,6 +15,7 @@
     a {
         text-decoration: none;
         color: $primary-highlight;
+        margin-right: 2px;
         &:hover, &:focus {
             color: lighten($primary-highlight, 14%);
         }
@@ -34,6 +35,7 @@
     width: $social-link-width;
     margin-right: 0px;
     vertical-align: middle;
+    padding: 5px;
 }
 
 #sidebar {
@@ -215,6 +217,7 @@
         display: inline;
         text-decoration: none;
         color: $primary-highlight;
+        margin-right: 2px;
     }
 }
 
@@ -271,7 +274,7 @@
         display: none;
     }
     .sidebar-links {
-        display: none;;
+        display: none;
     }
 
     .content {
@@ -387,13 +390,8 @@
         margin: 1em 1em 1em calc(1em + #{$sidebar-width});
     }
 
-    .sidebar-links {
-        // margin-top: 1em;
-        margin-top: 0px;
-    }
-
     .sidebar-links{
-        margin-top: 5px;
+        margin-top: 15px;
     }
 
     #content-fader {
