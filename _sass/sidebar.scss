@@ -15,7 +15,6 @@
     a {
         text-decoration: none;
         color: $primary-highlight;
-        margin-right: 2px;
         &:hover, &:focus {
             color: lighten($primary-highlight, 14%);
         }
@@ -217,7 +216,7 @@
         display: inline;
         text-decoration: none;
         color: $primary-highlight;
-        margin-right: 2px;
+        margin: 2px;
     }
 }
 
