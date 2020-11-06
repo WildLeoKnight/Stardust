@@ -16,6 +16,24 @@
     }
 }
 
+@mixin buttonMix($background, $highlight, $hoverbackground) {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all .25s ease;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid $background;
+    background-color: $background;
+    color: $highlight;
+    font-weight: bold;
+    font-size: 1rem;
+    &:hover, &:focus {
+        background-color: $hoverbackground;
+        color: $background;
+    }
+}
+
 .button-dark {
     @include button($text-color, $sidebar-color)
 }
@@ -46,4 +64,16 @@
 
 .button-light-tertiary {
     @include button($tertiary-highlight, $text-color)
+}
+
+.button-mix-primary {
+    @include buttonMix($primary-highlight, $text-color, $sidebar-color)
+}
+
+.button-mix-secondary {
+    @include buttonMix($secondary-highlight, $text-color, $sidebar-color)
+}
+
+.button-mix-tertiary {
+    @include buttonMix($tertiary-highlight, $text-color, $sidebar-color)
 }
