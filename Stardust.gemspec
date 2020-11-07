@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "Stardust"
-  spec.version       = "1.1.1"
+  spec.version       = "1.2.0"
   spec.authors       = ["Leonardo 'WildLeoKnight' Lourenco"]
   spec.email         = ["wildleoknight@gmail.com"]
 

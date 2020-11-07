@@ -5,10 +5,11 @@ description: example-description
 image: /path/to/image.png
 url: example-url
 sidebar_main_text: example-sidebar-main-text
-cover_url: example-cover-url
+home_url: example-cover-url
 cover_text: example-cover-text
 author: example-author
 lang: en-US
+google_analytics: ""
 
 # Build settings
 

@@ -72,10 +72,11 @@ You should also copy the folder `_sass` with `constants.scss` and the entire `pa
 - `image`: Website image, used in the sidebar, cover page and SEO.
 - `url`: Base url.
 - `sidebar_main_text`: Secondary sidebar text.
-- `cover_url`: Cover page button link.
+- `home_url`: Url for the Home page links.
 - `cover_text`: Cover page button text.
 - `author`: Your name, used for SEO.
 - `lang`: website's language, used for SEO.
+- `google_analytics`: Google analytics Measurement Id 
 
 [Click here for aditional parameters](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md) that can be set to use with `jekyll-seo-tag`. 
 
