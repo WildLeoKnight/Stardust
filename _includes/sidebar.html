@@ -34,12 +34,12 @@
                 <ul class="submenu">
                     {% for submenu in navigation.submenu %}
                     <li>
-                        <a href="{{ submenu.url }}" > {{ submenu.title }} </a> 
+                        <a href="{{ submenu.url }}" class="fade-onclick" > {{ submenu.title }} </a> 
                     </li>
                     {% endfor %}
                 </ul>
                 {% else %}
-                <a href="{{ navigation.url }}" > {{ navigation.title }} </a>
+                <a href="{{ navigation.url }}" class="fade-onclick" > {{ navigation.title }} </a>
                 {% endif %}
             </li>
             {% endfor %}
@@ -60,12 +60,12 @@
                 <ul class="submenu">
                     {% for submenu in navigation.submenu %}
                     <li>
-                        <a href="{{ submenu.url }}" > {{ submenu.title }} </a> 
+                        <a href="{{ submenu.url }}" class="fade-onclick" > {{ submenu.title }} </a> 
                     </li>
                     {% endfor %}
                 </ul>
                 {% else %}
-                <a href="{{ navigation.url }}" > {{ navigation.title }} </a>
+                <a href="{{ navigation.url }}" class="fade-onclick" > {{ navigation.title }} </a>
                 {% endif %}
             </li>
             {% endfor %}

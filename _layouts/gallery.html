@@ -14,7 +14,11 @@ layout: default
     <div class="list-piece">
       <div class="list-piece-link clickable-image">
         <a href="{{ art.image }}?{{ site.time | date: '%s%N' }}" data-title="{{ art.title }}" data-description="{{ art.description }}" data-linkurl="{{ art.linkurl }}" data-linktext="{{ art.linktext }}" style="max-width: 500px">
-          <img class="list-piece-image" src="{{ art.image }}?{{ site.time | date: '%s%N' }}" alt="{{ art.title }}" data-echo="{{ art.image }}?{{ site.time | date: '%s%N' }}" />
+          {% if site.lazyload_image %}
+            <img class="list-piece-image" src="{{ site.lazyload_image }}?{{ site.time | date: '%s%N' }}" alt="{{ art.title }}" data-echo="{{ art.image }}?{{ site.time | date: '%s%N' }}" />
+          {% else %}
+            <img class="list-piece-image" src="{{ art.image }}?{{ site.time | date: '%s%N' }}" alt="{{ art.title }}" data-echo="{{ art.image }}?{{ site.time | date: '%s%N' }}" />
+          {% endif %}
         </a>
       </div>
     </div>

@@ -3,6 +3,7 @@ title: example-title
 tagline: example-tagline
 description: example-description
 image: /path/to/image.png
+lazyload_image: /path/to/lazyimage.png
 url: example-url
 sidebar_main_text: example-sidebar-main-text
 home_url: example-cover-url
